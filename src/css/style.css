@@ -6,19 +6,28 @@ a {
     text-decoration: none;
 }
 
-h1,h2,h3,h4,h5,h6,
-p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
     padding: 0;
 }
 
-.header{
+header {
     position: relative;
+    max-height: 50px;
 }
 
-.nav {
+nav {
     max-height: 50px;
     background-color: #212121;
+    position: fixed;
+
+    width: 100%;
 }
 
 .menu {
@@ -43,10 +52,12 @@ p{
 
 
 .subheader {
-    position: absolute;
     width: 100%;
     height: 84px;
     background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 50px;
+    z-index: 2;
 
 }
 
@@ -99,13 +110,15 @@ p{
 }
 
 .promo {
-    color:#fff;
+    color: #fff;
     background-image: url(../img/uber_bg.jpg);
-    background-position: center;
+    background-position: top 50px center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 150px 0 185px;
+    padding: 200px 0 185px;
+    width: 100%;
 }
+
 
 .promo_title {
     text-align: center;
@@ -147,3 +160,67 @@ p{
     color: #fff;
 
 }
+
+.benefits {
+    padding: 20px 0 64px;
+
+}
+
+.lable {
+    background-color: #000;
+    width: 113px;
+    line-height: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 11px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    margin-top: 33px;
+
+}
+
+.benefits_title-icon {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: #1EACC7;
+}
+
+.benefits_text {
+    color: #202020;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+    margin-top: 5px;
+}
+
+
+.benefits_content {
+    max-width: 373px;
+}
+
+.benefits_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;
+    width: 113px;
+    height: 113px;
+    background-color: #1eacc7;
+    border-radius: 100%;
+}
+
+
+.benefits_item {
+    display: flex;
+    align-items: center;
+    margin-top: 23px;
+    padding: 0 33px;
+}
+
+
