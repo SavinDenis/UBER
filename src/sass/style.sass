@@ -1,6 +1,15 @@
 *
     font-family: 'Roboto', sans-serif
 
+$light_blue: #1eacc7
+$light_red: #FF5656
+$color_descr: #222222
+
+=btn_hover
+    &:hover
+        background-image: none
+        background-color: $light_blue
+
 a
     text-decoration: none
 
@@ -81,6 +90,8 @@ nav
     box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
     border-radius: 4px
     margin-top: 19px
+    transition: .3s all
+    +btn_hover
 
 .promo
     color: #fff
@@ -126,6 +137,8 @@ nav
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
     margin-top: 116px
     color: #fff
+    transition: 0.3s all
+    +btn_hover
 
 .benefits
     padding: 20px 0 64px
@@ -170,7 +183,7 @@ nav
     margin-right: 26px
     width: 113px
     height: 113px
-    background-color: #1eacc7
+    background-color: $light_blue
     border-radius: 100%
 
 .benefits_item
@@ -182,7 +195,17 @@ nav
 .mobile
     min-height: 864px
     padding: 48px 0 80px
-    background: url('../img/mobile_bg.jpg') center (center / cover) no-repeat
+    background-image: url('../img/mobile_bg.jpg')
+    svg
+        position: absolute
+        bottom: 35px
+        left: 50%
+        transform: translateX(-50%)
+    .circle
+        fill: #000
+        stroke: none
+        stroke-width: none
+
     .row
         margin-top: 32px
     &_item
@@ -211,26 +234,83 @@ nav
             text-transform: uppercase
             text-align: center
             color: #fff
-        &_plus
-            display: flex
-            justify-content: center
-            align-items: center
-            position: absolute
-            bottom: 35px
-            left: 50%
-            transform: translateX(-50%)
-            width: 26px
-            height: 26px
-            border-radius: 50%
-            background-color: #000
-            margin: 0 auto
-            cursor: pointer
-           
-            
-            
+        
 
 .sub_title
     text-align: center
     font-size: 17px
     line-height: 21px
     color: #222222
+
+.select
+    padding: 57px 0 110px
+    background: url(../img/automobile_bg.jpg) center (center/cover) no-repeat
+    position: relative
+    z-index: -2
+    .lable
+        color: #070716
+        background-color: #fff
+    .title
+        color: #fff
+    .sub_title
+        color: #fff
+    &_black
+        position: absolute
+        background-color: #222
+        height: 500px
+        width: 100%
+        top: 0
+        left: 0
+        z-index: -1
+    &_descr
+        text-align: center
+        font-weight: 300
+        font-size: 17px
+        line-height: 24px
+        color: #222222
+    img
+        margin: 0 auto
+        display: block
+        position: relative
+        z-index: 0
+        margin-top: 54px
+
+.terms
+    padding: 95px 0 87px
+    li
+        list-style-type: none
+        font-weight: 300
+        font-size: 17px
+        line-height: 30px
+        color: $color_descr
+        padding-left: 30px
+        background-image: url(../icons/check_blue.svg)
+        background-position-y: 4px
+        background-repeat: no-repeat
+    &_item
+        margin-top: 37px
+        padding: 0 42px 30px 5px
+        &_descr
+            color: $light_blue
+            font-weight: 300
+            font-size: 17px
+            line-height: 24px
+            &_red
+                color: $light_red
+        &_title
+            color: $light_blue
+            font-size: 22px
+            &_red
+                color: $light_red
+                li
+                    background-image: url(../icons/check_red.svg)
+
+.item_title_red
+    color: $light_red
+.item_descr_red
+    color: $light_red
+.list_red
+    li
+        background-image: url(../icons/check_red.svg)
+        background-position-y: 4px
+        background-repeat: no-repeat
