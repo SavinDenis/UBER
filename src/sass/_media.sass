@@ -34,6 +34,7 @@
 			font-size: 8px
 
 @media  (max-width: 991px)
+
 	.menu
 		&_item + &_item
 			padding-left: 10px
@@ -45,6 +46,11 @@
 				width: 100%
 		&_logotxt
 			font-size: 12px
+		&_btn
+			width: 150px
+			height: 38px
+			margin-top: 25px
+			font-size: 12px
 	.promo
 		&_title
 			font-size: 32px
@@ -52,6 +58,10 @@
 			font-size: 26px
 		&_text
 			font-size: 14px
+		&_btn
+			width: 210px
+			height: 50px
+			font-size: 16px
 
 	.benefits
 
@@ -91,4 +101,54 @@
 			line-height: 20px
 			a + a
 				margin-left: 5px
-				
+
+@media  (max-width: 767px)
+
+	.menu
+		.menu
+		position: fixed
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		top: 0
+		left: -100%
+		width: 50%
+		height: 100vh
+		padding: 20px 15px
+		background-color: rgba(0,0,0, .8)
+		transition: 0.6s all
+		&_active 
+			left: 0
+		&_link 
+			font-size: 20px
+		&_item + &_item
+			border-left: none
+		&_item
+			margin-top: 30px
+		
+		
+
+	.hamburger
+		display: block
+		position: absolute
+		right: 10px
+		width: 39px
+		margin-top: 15px
+
+		span
+			display: block
+			height: 2px
+			width: 100%
+			background-color: #fff
+			margin-bottom: 5px
+			transition: 0.6s all
+		&_active
+			margin-top: 24px
+			span
+				margin-bottom: -2px
+				&:nth-child(1)
+					transform: rotate(-45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: rotate(45deg)
