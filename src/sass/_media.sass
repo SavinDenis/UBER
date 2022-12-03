@@ -105,8 +105,7 @@
 @media  (max-width: 767px)
 
 	.menu
-		.menu
-		position: fixed
+		position: relative
 		flex-direction: column
 		justify-content: center
 		align-items: center
@@ -115,22 +114,22 @@
 		width: 50%
 		height: 100vh
 		padding: 20px 15px
-		background-color: rgba(0,0,0, .8)
+		background-color: rgba(0,0,0, .9)
 		transition: 0.6s all
-		&_active 
+		&_active
+			position: absolute
 			left: 0
-		&_link 
+			z-index: 100
+		&_link
 			font-size: 20px
 		&_item + &_item
 			border-left: none
 		&_item
 			margin-top: 30px
-		
-		
 
 	.hamburger
 		display: block
-		position: absolute
+		position: fixed
 		right: 10px
 		width: 39px
 		margin-top: 15px
@@ -144,7 +143,10 @@
 			transition: 0.6s all
 		&_active
 			margin-top: 24px
+			
+
 			span
+				background-color: #555
 				margin-bottom: -2px
 				&:nth-child(1)
 					transform: rotate(-45deg)
@@ -152,3 +154,96 @@
 					display: none
 				&:nth-child(3)
 					transform: rotate(45deg)
+	.subheader
+		&_logo
+			left: 40px
+			img
+				width: 100%
+
+		&_logotxt
+			display: none
+		&_btn
+			width: 150px
+			height: 38px
+			margin-top: 25px
+			font-size: 12px
+		&_call
+			display: none
+		&_tel
+			font-size: 16px
+	.sm_call
+		position: absolute
+		top: 10px
+		right: 40px
+	.sm_btn
+		position: absolute
+		bottom: 10px
+		right: 40px
+
+	.footer
+		.wraper
+			flex-direction: column
+			.link
+				width: 100%
+
+		&_social
+			justify-content: center
+			margin: 18px 0
+			order: 2
+		&_apps
+			display: flex
+			justify-content: center
+			order: 3
+			img
+				display: block
+		&_menu, &_link
+			justify-content: center
+		&_menu>a
+			margin-right: 12px
+			font-size: 14px
+		&_link>a
+			margin-right: 10px
+			font-size: 11px
+
+@media (max-width: 575px)
+	.menu
+		width: 75%
+		&_link
+			font-size: 16px
+
+	.subheader
+		max-height: 62px
+
+		&_logo
+			img
+				width: 100%
+		&_btn
+			width: 110px
+			height: 22px
+			font-size: 10px
+		&_tel
+			font-size: 12px
+
+	.benefits
+		&_item
+			display: block
+		&_icon
+			margin: 23px auto
+		&_content
+			margin: 0 auto
+
+	.select
+		&_black
+			height: 100%
+		&_descr
+			color: #fff
+			font-size: 17px
+
+	.footer
+		padding: 30px 5px
+
+	.footer
+		.wraper>.footer_social
+			width: 100%
+		.wraper>.footer_apps
+			width: 100%
